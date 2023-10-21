@@ -1,0 +1,55 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 50, 225, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: monospace;
+    text-align: center;
+}
+p{
+    font-size: 2em;
+    text-wrap: wrap;
+    margin: 10px;
+    text-shadow: 0px 0px 50px white ;
+}
+.hide{
+    display: none;
+}
+.buttons-types{
+    transition: 1s all ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+button{
+    margin-top: 1em;
+    max-height: fit-content;
+    max-width: fit-content;
+    font-family: monospace;
+    font-size: 2.5em;
+    text-wrap: nowrap;
+    border: 0;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+select{
+    font-size: 2em;
+    border-radius: 10px;
+    font-family: monospace;
+}
+.faixas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2em;
+}
