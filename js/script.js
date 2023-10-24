@@ -15,8 +15,6 @@ if(linhas == 4){
     document.getElementById('faixa-5').className='hide'
 }
 cores = ['Preto','Marrom','Vermelho','Laranja','Amarelo','Verde','Azul','Violeta','Cinza','Branco','Ouro','Prata','Sen cor']
-    
-
 
 
 checkcolor = (fx,fx_num) => {
@@ -87,9 +85,10 @@ document.getElementById('calcular').addEventListener('click',function(){
         else if(fx5 == 12){
             fx5 = 20
         }
-        document.getElementById('resultado').innerHTML ='Max: '+(result +((fx5 *result) /100))+'\nMin: '+(result -((fx5 *result) /100))
+        document.getElementById('resultado').innerHTML ='V.Nominal:\n'+result+'\nV.Max: '+(result +((fx5 *result) /100))+'\nV.Min: '+(result -((fx5 *result) /100))
     }else if(linhas == 4){
-        fx3 = eval(checkcolor(fx3,3))
+        
+        console.log(fx1+'\n'+fx2+'\n'+fx3+'\n'+fx4+'\n')
         num = eval(fx1+fx2)
         result = num * 10**fx3
         if(fx3==10){
@@ -117,7 +116,7 @@ document.getElementById('calcular').addEventListener('click',function(){
         else if(fx4 == 12){
             fx4 = 20}
         
-        document.getElementById('resultado').innerHTML = ('<br> Max: '+(result +((fx4 *result) /100))+'<br><br> Min: '+(result -((fx4 *result) /100)))
-
+            document.getElementById('resultado').innerHTML ='V.Nominal: '+result+'\n<br>V.Max: '+(result +((fx4 *result) /100))+'\n<br> V.Min: '+(result -((fx4 *result) /100))
+        console.log(' Max: '+(result +((fx4 *result) /100))+'     Min: '+(result -((fx4 *result) /100)))
     }
 })
