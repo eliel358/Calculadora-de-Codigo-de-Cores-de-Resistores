@@ -62,3 +62,6 @@ select{
     flex-wrap: wrap;
     gap: 0.2em;
 }
+img{
+    max-width: 100%;
+}

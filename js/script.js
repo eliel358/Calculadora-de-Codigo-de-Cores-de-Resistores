@@ -14,7 +14,7 @@ document.getElementById('fivel').addEventListener('click',function(){
 if(linhas == 4){
     document.getElementById('faixa-5').className='hide'
 }
-cores = ['Preto','Marrom','Vermelho','Laranja','Amarelo','Verde','Azul','Violeta','Cinza','Branco','Ouro','Prata','Sen cor']
+cores = ['Preto','Marrom','Vermelho','Laranja','Amarelo','Verde','Azul','Violeta','Cinza','Branco','Ouro','Prata','Sem cor']
 
 
 checkcolor = (fx,fx_num) => {
@@ -22,9 +22,7 @@ checkcolor = (fx,fx_num) => {
         if(cores[i] == fx){
             console.log(i)
             
-            if(i>9 && fx_num <= 3){
-                console.log('Erro: faixa '+fx_num +' não pode ser ouro prata ou sem cor')
-            }
+            
             return i.toString()
         }
     }
@@ -88,15 +86,26 @@ document.getElementById('calcular').addEventListener('click',function(){
         document.getElementById('resultado').innerHTML ='V.Nominal:\n'+result+'\nV.Max: '+(result +((fx5 *result) /100))+'\nV.Min: '+(result -((fx5 *result) /100))
     }else if(linhas == 4){
         
-        console.log(fx1+'\n'+fx2+'\n'+fx3+'\n'+fx4+'\n')
+        console.log('aafx1\n'+fx1+'\n'+fx2+'\n'+fx3+'\n'+fx4+'\n')
         num = eval(fx1+fx2)
         result = num * 10**fx3
+        
+        if(fx1>=10){
+            document.getElementById('resultado').innerHTML = "ERRO: Faixa 1 não pode ser "+cores[10]+', '+cores[11]+', ou '+cores[12]+','
+            return
+        }   
+        if(fx2>=10){
+            document.getElementById('resultado').innerHTML = "ERRO: Faixa 2 não pode ser "+cores[10]+', '+cores[11]+', ou '+cores[12]+','
+            return
+        }   
         if(fx3==10){
             result = num * 0.1}
         if(fx3==11){
             result = num * 0.01}
         if(fx3==12){
-            console.log('Erro: a faixa 3 não pode ser sem cor')}
+            document.getElementById('resultado').innerHTML = "ERRO: Faixa 3 não pode ser Sem cor"
+            return
+        }
         if(fx4 == 1){
             fx4 = 1}
         else if(fx4 == 2){
@@ -115,7 +124,22 @@ document.getElementById('calcular').addEventListener('click',function(){
             fx4 = 10}
         else if(fx4 == 12){
             fx4 = 20}
-        
+        if(fx4 == 0){
+            document.getElementById('resultado').innerHTML = "ERRO: Faixa 4 não pode ser Preto, Laranja, Amarelo, ou Branco"
+            return
+        }
+        if(fx4 == 3){
+            document.getElementById('resultado').innerHTML = "ERRO: Faixa 4 não pode ser Preto, Laranja, Amarelo, ou Branco"
+            return
+        }
+        if(fx4 == 4){
+            document.getElementById('resultado').innerHTML = "ERRO: Faixa 4 não pode ser Preto, Laranja, Amarelo, ou Branco"
+            return
+        }
+        if(fx4 == 9){
+            document.getElementById('resultado').innerHTML = "ERRO: Faixa 4 não pode ser Preto, Laranja, Amarelo, ou Branco"
+            return
+        }
             document.getElementById('resultado').innerHTML ='V.Nominal: '+result+'\n<br>V.Max: '+(result +((fx4 *result) /100))+'\n<br> V.Min: '+(result -((fx4 *result) /100))
         console.log(' Max: '+(result +((fx4 *result) /100))+'     Min: '+(result -((fx4 *result) /100)))
     }
