@@ -9,105 +9,108 @@
     <script defer src="./js/script.js"></script>
 </head>
 <body>
-    <div id="buttons-types" class="buttons-types" style="display: none;">
-        <p>Quantas linhas tem o resistor que você quer medir?</p>
+    <div id="buttons-types" class="buttons-types">
+        <p>Quantas faixas tem o resistor que você quer medir?</p>
         <button  id="fourl">4 Linhas</button>
         <button id="fivel">5 Linhas</button>
     </div>
-    <img src="./assets/tabela cores.png">
-    <div class="faixas">
-        <div id="faixa-1">
-            <p>Faixa 1</p>
-            <select name="Faixa 1" id="Faixa 1">
-                <option value="Preto">Preto</option>
-                <option value="Marrom">Marrom</option>
-                <option value="Vermelho">Vermelho</option>
-                <option value="Laranja">Laranja</option>
-                <option value="Amarelo">Amarelo</option>
-                <option value="Verde">Verde</option>
-                <option value="Azul">Azul</option>
-                <option value="Violeta">Violeta</option>
-                <option value="Cinza">Cinza</option>
-                <option value="Branco">Branco</option>
-                <option value="Ouro">Ouro</option>
-                <option value="Prata">Prata</option>
-                <option value="Sem cor">Sem cor</option>
-            </select>
+    <div class="calcular-cores" id='calcular-cores'>
+        <img src="./assets/tabela cores.png">
+        <div class="faixas">
+            <div id="faixa-1">
+                <p>Faixa 1</p>
+                <select name="Faixa 1" id="Faixa 1">
+                    <option value="Vermelho">Vermelho</option>
+                    <option value="Preto">Preto</option>
+                    <option value="Marrom">Marrom</option>
+                    <option value="Laranja">Laranja</option>
+                    <option value="Amarelo">Amarelo</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Violeta">Violeta</option>
+                    <option value="Cinza">Cinza</option>
+                    <option value="Branco">Branco</option>
+                    <option value="Ouro">Ouro</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Sem cor">Sem cor</option>
+                </select>
+            </div>
+            <div id="faixa-2">
+                <p>Faixa 2</p>
+                <select name="Faixa 2" id="Faixa 2">
+                    <option value="Vermelho">Vermelho</option>
+                    <option value="Preto">Preto</option>
+                    <option value="Marrom">Marrom</option>
+                    <option value="Laranja">Laranja</option>
+                    <option value="Amarelo">Amarelo</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Violeta">Violeta</option>
+                    <option value="Cinza">Cinza</option>
+                    <option value="Branco">Branco</option>
+                    <option value="Ouro">Ouro</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Sem cor">Sem cor</option>
+                </select>
+            </div>
+            <div id="faixa-3">
+                <p>Faixa 3</p>
+                <select name="Faixa 3" id="Faixa 3">
+                    <option value="Amarelo">Amarelo</option>
+                    <option value="Preto">Preto</option>
+                    <option value="Marrom">Marrom</option>
+                    <option value="Vermelho">Vermelho</option>
+                    <option value="Laranja">Laranja</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Violeta">Violeta</option>
+                    <option value="Cinza">Cinza</option>
+                    <option value="Branco">Branco</option>
+                    <option value="Ouro">Ouro</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Sem cor">Sem cor</option>
+                </select>
+            </div>
+            <div id="faixa-4">
+                <p>Faixa 4</p>
+                <select name="Faixa 4" id="Faixa 4">
+                    <option value="Ouro">Ouro</option>
+                    <option value="Preto">Preto</option>
+                    <option value="Marrom">Marrom</option>
+                    <option value="Vermelho">Vermelho</option>
+                    <option value="Laranja">Laranja</option>
+                    <option value="Amarelo">Amarelo</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Violeta">Violeta</option>
+                    <option value="Cinza">Cinza</option>
+                    <option value="Branco">Branco</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Sem cor">Sem cor</option>
+                </select>
+            </div>
+            <div id="faixa-5">
+                <p>Faixa 5</p>
+                <select name="Faixa 5" id="Faixa 5">
+                    <option value="Preto">Preto</option>
+                    <option value="Marrom">Marrom</option>
+                    <option value="Vermelho">Vermelho</option>
+                    <option value="Laranja">Laranja</option>
+                    <option value="Amarelo">Amarelo</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Violeta">Violeta</option>
+                    <option value="Cinza">Cinza</option>
+                    <option value="Branco">Branco</option>
+                    <option value="Ouro">Ouro</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Sem cor">Sem cor</option>
+                </select>
+            </div>
         </div>
-        <div id="faixa-2">
-            <p>Faixa 2</p>
-            <select name="Faixa 2" id="Faixa 2">
-                <option value="Preto">Preto</option>
-                <option value="Marrom">Marrom</option>
-                <option value="Vermelho">Vermelho</option>
-                <option value="Laranja">Laranja</option>
-                <option value="Amarelo">Amarelo</option>
-                <option value="Verde">Verde</option>
-                <option value="Azul">Azul</option>
-                <option value="Violeta">Violeta</option>
-                <option value="Cinza">Cinza</option>
-                <option value="Branco">Branco</option>
-                <option value="Ouro">Ouro</option>
-                <option value="Prata">Prata</option>
-                <option value="Sem cor">Sem cor</option>
-            </select>
-        </div>
-        <div id="faixa-3">
-            <p>Faixa 3</p>
-            <select name="Faixa 3" id="Faixa 3">
-                <option value="Preto">Preto</option>
-                <option value="Marrom">Marrom</option>
-                <option value="Vermelho">Vermelho</option>
-                <option value="Laranja">Laranja</option>
-                <option value="Amarelo">Amarelo</option>
-                <option value="Verde">Verde</option>
-                <option value="Azul">Azul</option>
-                <option value="Violeta">Violeta</option>
-                <option value="Cinza">Cinza</option>
-                <option value="Branco">Branco</option>
-                <option value="Ouro">Ouro</option>
-                <option value="Prata">Prata</option>
-                <option value="Sem cor">Sem cor</option>
-            </select>
-        </div>
-        <div id="faixa-4">
-            <p>Faixa 4</p>
-            <select name="Faixa 4" id="Faixa 4">
-                <option value="Preto">Preto</option>
-                <option value="Marrom">Marrom</option>
-                <option value="Vermelho">Vermelho</option>
-                <option value="Laranja">Laranja</option>
-                <option value="Amarelo">Amarelo</option>
-                <option value="Verde">Verde</option>
-                <option value="Azul">Azul</option>
-                <option value="Violeta">Violeta</option>
-                <option value="Cinza">Cinza</option>
-                <option value="Branco">Branco</option>
-                <option value="Ouro">Ouro</option>
-                <option value="Prata">Prata</option>
-                <option value="Sem cor">Sem cor</option>
-            </select>
-        </div>
-        <div id="faixa-5">
-            <p>Faixa 5</p>
-            <select name="Faixa 5" id="Faixa 5">
-                <option value="Preto">Preto</option>
-                <option value="Marrom">Marrom</option>
-                <option value="Vermelho">Vermelho</option>
-                <option value="Laranja">Laranja</option>
-                <option value="Amarelo">Amarelo</option>
-                <option value="Verde">Verde</option>
-                <option value="Azul">Azul</option>
-                <option value="Violeta">Violeta</option>
-                <option value="Cinza">Cinza</option>
-                <option value="Branco">Branco</option>
-                <option value="Ouro">Ouro</option>
-                <option value="Prata">Prata</option>
-                <option value="Sem cor">Sem cor</option>
-            </select>
-        </div>
+        <input type="number" id="errortax" placeholder="Quanto você mediu(Ω)">
+        <button id="calcular">Calcular</button>
     </div>
-    <button id="calcular">Calcular</button>
     <p id="resultado"></p>
 </body>
 </html>
