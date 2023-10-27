@@ -14,12 +14,18 @@ body{
     text-align: center;
     gap: 10px;
 }
+.calcular-cores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 p{
     font-size: 2em;
     text-wrap: wrap;
     margin: 10px;
     text-align: start;
-    text-shadow: 0px 0px 50px white ;
+    text-shadow: 0px 0px 20px white ;
+    
 }
 .hide{
     display: none;
@@ -41,6 +47,7 @@ button{
     text-wrap: nowrap;
     border: 0;
     border-radius: 10px;
+    transition: all 1s ease;
     padding: 0.5em;
 }
 td{
@@ -62,6 +69,20 @@ select{
     flex-wrap: wrap;
     gap: 0.2em;
 }
+input{
+    transition: all 1s ease;
+    margin-top: 1em;
+    max-height: fit-content;
+    max-width: fit-content;
+    font-family: monospace;
+    font-size: 2em;
+    text-wrap: nowrap;
+    border: 0;
+    border-radius: 10px;
+    padding: 0.2em;
+}
 img{
+    margin-bottom: 5px;
+    border-radius: 10px;
     max-width: 100%;
 }
