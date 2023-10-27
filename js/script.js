@@ -1,33 +1,35 @@
-linhas = 4
+linhas = 0
+
 if(linhas == 0){
+    document.getElementById('calcular-cores').className='hide'
     document.getElementById('buttons-types').className='buttons-types'
 }
 document.getElementById('fourl').addEventListener('click',function(){
+    document.getElementById('calcular-cores').className='calcular-cores'
     document.getElementById('buttons-types').className='hide'
+    document.getElementById('faixa-5').className='hide'
     linhas = 4
 })
 document.getElementById('fivel').addEventListener('click',function(){
+    document.getElementById('calcular-cores').className='calcular-cores'
     document.getElementById('buttons-types').className='hide'
+    document.getElementById('faixa-5').className='option'
     linhas = 5
 })
 
 if(linhas == 4){
-    document.getElementById('faixa-5').className='hide'
-}
+    
+} 
 cores = ['Preto','Marrom','Vermelho','Laranja','Amarelo','Verde','Azul','Violeta','Cinza','Branco','Ouro','Prata','Sem cor']
 
 
 checkcolor = (fx,fx_num) => {
     for(i=0;i<13;i++){
-        if(cores[i] == fx){
-            console.log(i)
-            
-            
+        if(cores[i] == fx){            
             return i.toString()
         }
     }
 }
-
 
 document.getElementById('calcular').addEventListener('click',function(){
     fx1 = document.getElementById('Faixa 1').value
@@ -53,7 +55,7 @@ document.getElementById('calcular').addEventListener('click',function(){
             result = num * 0.01
         }
         if(fx4==12){
-            console.log('Erro: a faixa 4 não pode ser sem cor')
+            // console.log('Erro: a faixa 4 não pode ser sem cor')
             // return
         }
         if(fx5 == 1){
@@ -83,10 +85,23 @@ document.getElementById('calcular').addEventListener('click',function(){
         else if(fx5 == 12){
             fx5 = 20
         }
-        document.getElementById('resultado').innerHTML ='V.Nominal:\n'+result+'\nV.Max: '+(result +((fx5 *result) /100))+'\nV.Min: '+(result -((fx5 *result) /100))
-    }else if(linhas == 4){
+        errorinput = document.getElementById('errortax').value
+        m = errorinput - result
+        errortax = m/result
+        errortax = (errortax*100).toFixed(2)
+                
         
-        console.log('aafx1\n'+fx1+'\n'+fx2+'\n'+fx3+'\n'+fx4+'\n')
+
+       
+
+
+        document.getElementById('resultado').innerHTML ='V.Nominal: '+result.toFixed(2)+'Ω\n<br>V.Max: '+(result +((fx4 *result) /100)).toFixed(2)+'Ω\n<br> V.Min: '+(result -((fx4 *result) /100)).toFixed(2)+'Ω'
+        if(document.getElementById('errortax').value != ''){
+            document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML +'\n<br> Taxa de erro: '+errortax+'%'
+        }
+    }else if(linhas == 4){
+        console.log('4 linhas')
+        // console.log('aafx1\n'+fx1+'\n'+fx2+'\n'+fx3+'\n'+fx4+'\n')
         num = eval(fx1+fx2)
         result = num * 10**fx3
         
@@ -140,7 +155,20 @@ document.getElementById('calcular').addEventListener('click',function(){
             document.getElementById('resultado').innerHTML = "ERRO: Faixa 4 não pode ser Preto, Laranja, Amarelo, ou Branco"
             return
         }
-            document.getElementById('resultado').innerHTML ='V.Nominal: '+result+'\n<br>V.Max: '+(result +((fx4 *result) /100))+'\n<br> V.Min: '+(result -((fx4 *result) /100))
-        console.log(' Max: '+(result +((fx4 *result) /100))+'     Min: '+(result -((fx4 *result) /100)))
+        errorinput = document.getElementById('errortax').value
+        m = errorinput - result
+        errortax = m/result
+        errortax = (errortax*100).toFixed(2)
+                
+        
+
+       
+        console.log(result)
+
+        document.getElementById('resultado').innerHTML ='V.Nominal: '+result.toFixed(2)+'Ω\n<br>V.Max: '+(result +((fx4 *result) /100))+'Ω\n<br> V.Min: '+(result -((fx4 *result) /100))+'Ω'
+        if(document.getElementById('errortax').value != ''){
+            document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML +'\n<br> Taxa de erro: '+errortax+'%'
+        }
+        // console.log(' Max: '+(result +((fx4 *result) /100))+'     Min: '+(result -((fx4 *result) /100)))
     }
 })
